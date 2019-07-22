@@ -16,15 +16,14 @@ func palindrome( _ number: Int ) -> Bool {
     var reversedNumber = 0
     
     while num > 0 {
-        let rightDigit = num % 10
-        reversedNumber = reversedNumber * 10 + rightDigit
-        num = num / 10
+        reversedNumber = reversedNumber * 10 + num % 10
+        num /= 10
     }
     
     return number == reversedNumber
 }
 
-class IntPalindromes: XCTestCase {
+class TestIntPalindromes: XCTestCase {
     override func setUp() {
         super.setUp()
     }
@@ -33,17 +32,17 @@ class IntPalindromes: XCTestCase {
         super.tearDown()
     }
     
-    func testIntPalindromes19891() {
+    func testIntPalindromes_19891() {
         XCTAssertEqual(palindrome(19891), true)
     }
     
-    func testIntPalindromes123() {
+    func testIntPalindromes_123() {
         XCTAssertEqual(palindrome(1234), false)
     }
 
-    func testIntPalindromes19277291() {
+    func testIntPalindromes_19277291() {
         XCTAssertEqual(palindrome(19277291), true)
     }
 }
 
-IntPalindromes.defaultTestSuite.run()
+TestIntPalindromes.defaultTestSuite.run()
