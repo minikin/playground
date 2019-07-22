@@ -20,7 +20,7 @@ func maxChar(_ str: String) -> String {
             charDictionary[String(char)] = 1
         }
     }
-    
+        
     for char in charDictionary {
         if let value = charDictionary[char.key] {
             if value > max {
