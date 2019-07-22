@@ -21,10 +21,9 @@ func palindrome1(_ str: String) -> Bool {
 }
 
 func palindrome2(_ str: String) -> Bool {
-    let stringLength = str.count
     var position = 0
     
-    while position < stringLength / 2 {
+    while position < str.count / 2 {
         let startIndex = str.index(str.startIndex, offsetBy: position)
         let endIndex = str.index(str.endIndex, offsetBy: -position - 1)
         
