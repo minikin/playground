@@ -39,7 +39,7 @@ func palindrome2(_ str: String) -> Bool {
 
 
 
-class PalindromesTests: XCTestCase {
+class TestPalindromes: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -64,7 +64,6 @@ class PalindromesTests: XCTestCase {
     func testIsNotPalindrome2() {
         XCTAssertNotEqual(palindrome2("abcdefg"), true)
     }
-    
 }
 
-PalindromesTests.defaultTestSuite.run()
+TestPalindromes.defaultTestSuite.run()
