@@ -39,10 +39,6 @@ class TestFizzbuzz: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
-    func testFizzBuzz() {
-        
-    }
 }
 
 TestFizzbuzz.defaultTestSuite.run()
